@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .noScrollY {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow-y: scroll;
+    }
+
+    .noScrollY::-webkit-scrollbar {
+        display: none;
+    }
+
+    .noScrollX {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow-x: scroll;
+    }
+
+    .noScrollX::-webkit-scrollbar {
+        display: none;
+    }
+}
