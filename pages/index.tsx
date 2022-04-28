@@ -7,8 +7,8 @@ const Home: NextPage = () => {
   
   return (
     <div className={`min-h-0 min-w-0`}>
-      <Navigation_/>
-      {/* <Video_/> */}
+      {/* <Navigation_/> */}
+      <Video_/>
       {/* <Stats_/> */}
     </div>
   )
