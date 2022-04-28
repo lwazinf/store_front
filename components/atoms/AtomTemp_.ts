@@ -1,6 +1,12 @@
 import { atom } from 'recoil'
 
-export const textState = atom({
-    key: 'textState', // unique ID (with respect to other atoms/selectors)
-    default: 'click me', // default value (aka initial value)
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faAdd,
+} from '@fortawesome/free-solid-svg-icons'
+
+export const navState = atom({
+    key: 'navState', // unique ID (with respect to other atoms/selectors)
+    default: faAdd, // default value (aka initial value)
   });

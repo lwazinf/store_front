@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
       <Layout_>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
       </Layout_>
     </RecoilRoot>
   )
