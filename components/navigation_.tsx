@@ -29,7 +29,7 @@ const Navigation_ = ({}: Navigation_Props) => {
     <div
       className={`noScrollY mx-auto flex ${
         navArea ? 'h-[200px] w-[470px]' : 'h-[70px] w-[70px]'
-      } relative flex-col rounded-md bg-black/5 transition-all duration-200 hover:h-[200px]`}
+      } flex-col rounded-md bg-black/5 transition-all duration-200 hover:h-[200px] fixed top-0`}
     >
       <div
         className={`flex w-[70px] flex-col rounded-md px-[5px] transition-all duration-200 ${

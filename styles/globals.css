@@ -3,18 +3,37 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    background: #f9fbff;
+  }
 
-    body {
-        background: #e8e8ee;
-    }
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #00000050 transparent;
+  }
 
-    input:focus, textarea:focus, select:focus {
-        outline: none
-    }
-
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
 }
 
 @layer components {
+  .neumorphism {
+    border-radius: 5px;
+background: #f9fbff;
+box-shadow:  -7px 7px 14px #d3ced9,
+             7px -7px 14px #ffffff;
+  }
+
+  .neumorphism:hover {
+    border-radius: 5px;
+    background: #f9fbff;
+    box-shadow:  -14px 14px 28px #bfbac4,
+                 14px -14px 28px #ffffff;
+  }
+
   .noScrollY {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -35,10 +54,33 @@
     display: none;
   }
 
-  .neumorphism {
-    border-radius: 4px;
-    background: #e8e8ee;
-    box-shadow:  5px 5px 10px #c5c5ca,
-                 -5px -5px 10px #ffffff;
+  .my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -2px; /* gutter size offset */
+    width: auto;
   }
+  .my-masonry-grid_column {
+    padding-left: 2px; /* gutter size */
+    background-clip: padding-box;
+  }
+
+  /* Style your items */
+  .my-masonry-grid_column > div {
+    /* change div to reference your elements you put in <Masonry> */
+    /* background: grey; */
+    margin-bottom: 10px;
+  }
+
+  .glassEffect {
+    background: rgba(2, 6, 2, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+}
+
+@layer utilities {
 }

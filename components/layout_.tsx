@@ -1,9 +1,12 @@
 import Head from 'next/head'
+import { useRecoilState } from 'recoil'
+import { modalState } from './atoms/AtomTemp_'
 interface Layout_Props {
   children: JSX.Element
 }
 
 const Layout_ = ({ children }: Layout_Props) => {
+  const [modal_, setModal_] = useRecoilState(modalState)
   return (
     <div>
       <Head>
